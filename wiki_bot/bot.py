@@ -1,13 +1,8 @@
-"""
-This is a echo bot.
-It echoes any incoming text messages.
-"""
-
 import logging
 
 from aiogram import Bot, Dispatcher, executor, types
 
-API_TOKEN = 'BOT TOKEN HERE'
+API_TOKEN = '5663234765:AAEmtX9IV0lfxI8s1OxYDOV9Skpq4gC-i1w'
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -28,9 +23,6 @@ async def send_welcome(message: types.Message):
 
 @dp.message_handler()
 async def echo(message: types.Message):
-    # old style:
-    # await bot.send_message(message.chat.id, message.text)
-
     await message.answer(message.text)
 
 
